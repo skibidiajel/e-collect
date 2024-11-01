@@ -1,0 +1,44 @@
+.header-title{
+  font-size: 100%;
+}
+
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+.ham-menu span:nth-child(3){
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+  transform: translate(0%, 0%) rotate(180deg);
+}
+.ham-menu.active span:nth-child(2){
+  transform: translate(0%, 0%) rotate(180deg);
+}
+.ham-menu.active span:nth-child(3){
+  transform: translate(0%, 0%) rotate(180deg);
+}
+
+header .ham-menu{
+  width: 10%;
+  position: relative;
+  margin-right: 15px;
+  display: none;
+}
+
+header .ham-menu span{
+  height: 5px;
+  width: 100%;
+  background-color: var(--txtColor);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: transalate(-50%, -50%);
+  transition: .3s ease;
+}
+/* FOR NAVIGATION LIST */
+.navigation-list.active{
+  left: 0; 
+  width: 70%;
+}
