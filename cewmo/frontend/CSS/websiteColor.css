@@ -1,0 +1,13 @@
+:root{
+  --bgColor: #C1E899;
+  --txtColor: #9A6735;
+  --liningColor: #E6F0DC;
+  --highlighterColor: #55883B;
+  --confirmBtnColor: #3F704D;
+  --cancelBtnColor: #CA3433;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}

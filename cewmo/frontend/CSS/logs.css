@@ -1,0 +1,147 @@
+@import "./websiteColor.css";
+@import "./mobile.css";
+body{
+  overflow: hidden;
+}
+/* FOR HEADER TAG */
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 13vw 5px 15px;
+  background-color: var(--bgColor);
+  color: var(--txtColor);
+}
+
+.head-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-name img{
+  max-width: 55px;
+  margin: 0 8px 0 0;
+}
+
+.login-logout img{
+  max-width: 20px;
+  margin: 0 0 0 8px;
+}
+
+.logout-hover:hover{
+  opacity: .5;
+  cursor: pointer;
+}
+/* FOR NAVIGATION TAG */
+.nav-main-container{
+  display: flex;
+  height: 93vh;
+  width: 100%;
+}
+
+nav{
+  max-width: 180px;
+  display: flex; 
+  flex-direction: column;
+  background-color: var(--bgColor);
+}
+
+nav .nav-list{
+  list-style: none;
+}
+
+nav .nav-item{
+  font-size: 18px;
+  margin-top: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav .nav-link{
+  color: var(--txtColor);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .active{
+  border-radius: 5px;
+  background-color: rgba(76,91,60,.5);
+}
+
+nav .nav-item:hover{
+  border-radius: 5px;
+  background-color: rgba(76,91,60,.5);
+  transition: .3s;
+}
+/* FOR MAIN TAG */
+main{
+  width: 90%;
+  padding: 18px 0 15px 18px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+main table caption{
+  font-size: 40px;
+  font-weight: bolder;
+  color: var(--txtColor);
+}
+
+main table{
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 5px #808080;
+  height: fit-content;
+  margin-bottom: 15px;
+}
+
+table th{
+  font-size: 20px;
+}
+
+table tr, table th, table td{
+  text-align: center;
+  padding: 15px;
+  text-align: left;
+}
+
+main table tr:nth-child(even){
+  background-color: var(--liningColor);
+  color: var(--txtColor);
+  
+}
+
+main table tr:nth-child(odd){
+  background-color: var(--bgColor);
+  color: var(--txtColor);
+}
+
+/* RESPONSIVE CODES */
+@media only screen and (max-width: 800px){
+  header .ham-menu{
+    display: block;
+  }
+  .login-logout{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    justify-content: center;
+  }
+  nav{
+    position: absolute;
+    left: -180px;
+    transition: .3s ease;
+    z-index: 2;
+    max-width: none;
+  }
+  main{
+    margin-bottom: 15px;
+    width: 99%;
+    padding-right: 18px;
+  }
+  main table caption{
+    font-size: 1.9em;
+  }
+}
